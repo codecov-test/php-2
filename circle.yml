@@ -5,3 +5,8 @@ machine:
 test:
   override: 
     - vendor/bin/phpunit --coverage-clover=coverage.xml
+  post:
+    - codecov
+dependencies:
+  override:
+    - sudo pip install codecov
